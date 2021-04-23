@@ -1,0 +1,3590 @@
+{
+  "contractName": "CrowdFunding",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "beneficiary",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "goal",
+          "type": "uint256"
+        }
+      ],
+      "name": "newCampaign",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "campaignID",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "campaignID",
+          "type": "uint256"
+        }
+      ],
+      "name": "contribute",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "campaignID",
+          "type": "uint256"
+        }
+      ],
+      "name": "checkGoalReached",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "reached",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"campaignID\",\"type\":\"uint256\"}],\"name\":\"checkGoalReached\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"reached\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"campaignID\",\"type\":\"uint256\"}],\"name\":\"contribute\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"goal\",\"type\":\"uint256\"}],\"name\":\"newCampaign\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"campaignID\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/spider/Desktop/ngo_folder/contracts/ngo1.sol\":\"CrowdFunding\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/spider/Desktop/ngo_folder/contracts/ngo1.sol\":{\"keccak256\":\"0xb7b64e2ee3d19e59a26c1e7ad68ed6ce3763f4401f731d8791e2d979968396b3\",\"urls\":[\"bzz-raw://4be3074e98d99bd9f15fca3315aa3c5b1e29c86c21e9766bed079b73113c933f\",\"dweb:/ipfs/QmTHD2e1vBtJPauCYHwxDnpKXzYRvPXTRymbXwPmqJo1sz\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061036c806100206000396000f3fe6080604052600436106100345760003560e01c80635b2329d414610039578063c1cbbca71461008c578063f7572cf3146100ba575b600080fd5b34801561004557600080fd5b506100726004803603602081101561005c57600080fd5b8101908080359060200190929190505050610129565b604051808215151515815260200191505060405180910390f35b6100b8600480360360208110156100a257600080fd5b81019080803590602001909291905050506101e5565b005b3480156100c657600080fd5b50610113600480360360408110156100dd57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291905050506102b8565b6040518082815260200191505060405180910390f35b60008060016000848152602001908152602001600020905080600101548160030154101561015b5760009150506101e0565b600081600301549050600082600301819055508160000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f193505050501580156101d8573d6000803e3d6000fd5b506001925050505b919050565b600060016000838152602001908152602001600020905060405180604001604052803373ffffffffffffffffffffffffffffffffffffffff1681526020013481525081600401600083600201600081548092919060010191905055815260200190815260200160002060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550602082015181600101559050503481600301600082825401925050819055505050565b60008060008154809291906001019190505590506000600160008381526020019081526020016000209050838160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550828160010181905550509291505056fea264697066735822122035b1be1e8c1428f2d7d5a602eded7af1e552dd52b869b719b44165076c8ddf5764736f6c63430006010033",
+  "deployedBytecode": "0x6080604052600436106100345760003560e01c80635b2329d414610039578063c1cbbca71461008c578063f7572cf3146100ba575b600080fd5b34801561004557600080fd5b506100726004803603602081101561005c57600080fd5b8101908080359060200190929190505050610129565b604051808215151515815260200191505060405180910390f35b6100b8600480360360208110156100a257600080fd5b81019080803590602001909291905050506101e5565b005b3480156100c657600080fd5b50610113600480360360408110156100dd57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291905050506102b8565b6040518082815260200191505060405180910390f35b60008060016000848152602001908152602001600020905080600101548160030154101561015b5760009150506101e0565b600081600301549050600082600301819055508160000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f193505050501580156101d8573d6000803e3d6000fd5b506001925050505b919050565b600060016000838152602001908152602001600020905060405180604001604052803373ffffffffffffffffffffffffffffffffffffffff1681526020013481525081600401600083600201600081548092919060010191905055815260200190815260200160002060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550602082015181600101559050503481600301600082825401925050819055505050565b60008060008154809291906001019190505590506000600160008381526020019081526020016000209050838160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550828160010181905550509291505056fea264697066735822122035b1be1e8c1428f2d7d5a602eded7af1e552dd52b869b719b44165076c8ddf5764736f6c63430006010033",
+  "sourceMap": "291:1617:1:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;291:1617:1;;;;;;;",
+  "deployedSourceMap": "291:1617:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1595:311;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1595:311:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1595:311:1;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1155:434;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1155:434:1;;;;;;;;;;;;;;;;;:::i;:::-;;687:462;;8:9:-1;5:2;;;30:1;27;20:12;5:2;687:462:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;687:462:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1595:311;1654:12;1678:18;1699:9;:21;1709:10;1699:21;;;;;;;;;;;1678:42;;1745:1;:13;;;1734:1;:8;;;:24;1730:54;;;1779:5;1772:12;;;;;1730:54;1794:11;1808:1;:8;;;1794:22;;1837:1;1826;:8;;:12;;;;1848:1;:13;;;;;;;;;;;;:22;;:30;1871:6;1848:30;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1848:30:1;1895:4;1888:11;;;;1595:311;;;;:::o;1155:434::-;1217:18;1238:9;:21;1248:10;1238:21;;;;;;;;;;;1217:42;;1506:45;;;;;;;;1520:10;1506:45;;;;;;1540:9;1506:45;;;1478:1;:9;;:25;1488:1;:12;;;:14;;;;;;;;;;;;1478:25;;;;;;;;;;;:73;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1573:9;1561:1;:8;;;:21;;;;;;;;;;;1155:434;;:::o;687:462::-;764:15;804:12;;:14;;;;;;;;;;;;791:27;;1033:18;1054:9;:21;1064:10;1054:21;;;;;;;;;;;1033:42;;1101:11;1085:1;:13;;;:27;;;;;;;;;;;;;;;;;;1138:4;1122:1;:13;;:20;;;;687:462;;;;;:::o",
+  "source": "// SPDX-License-Identifier: GPL-3.0\npragma solidity >=0.6.0 <0.9.0;\n\n// Defines a new type with two fields.\n// Declaring a struct outside of a contract allows\n// it to be shared by multiple contracts.\n// Here, this is not really needed.\nstruct Funder {\n    address addr;\n    uint amount;\n}\n\ncontract CrowdFunding {\n    // Structs can also be defined inside contracts, which makes them\n    // visible only there and in derived contracts.\n    struct Campaign {\n        address payable beneficiary;\n        uint fundingGoal;\n        uint numFunders;\n        uint amount;\n        mapping (uint => Funder) funders;\n    }\n\n    uint numCampaigns;\n    mapping (uint => Campaign) campaigns;\n\n    function newCampaign(address payable beneficiary, uint goal) public returns (uint campaignID) {\n        campaignID = numCampaigns++; // campaignID is return variable\n        // We cannot use \"campaigns[campaignID] = Campaign(beneficiary, goal, 0, 0)\"\n        // because the RHS creates a memory-struct \"Campaign\" that contains a mapping.\n        Campaign storage c = campaigns[campaignID];\n        c.beneficiary = beneficiary;\n        c.fundingGoal = goal;\n    }\n\n    function contribute(uint campaignID) public payable {\n        Campaign storage c = campaigns[campaignID];\n        // Creates a new temporary memory struct, initialised with the given values\n        // and copies it over to storage.\n        // Note that you can also use Funder(msg.sender, msg.value) to initialise.\n        c.funders[c.numFunders++] = Funder({addr: msg.sender, amount: msg.value});\n        c.amount += msg.value;\n    }\n\n    function checkGoalReached(uint campaignID) public returns (bool reached) {\n        Campaign storage c = campaigns[campaignID];\n        if (c.amount < c.fundingGoal)\n            return false;\n        uint amount = c.amount;\n        c.amount = 0;\n        c.beneficiary.transfer(amount);\n        return true;\n    }\n}",
+  "sourcePath": "/home/spider/Desktop/ngo_folder/contracts/ngo1.sol",
+  "ast": {
+    "absolutePath": "/home/spider/Desktop/ngo_folder/contracts/ngo1.sol",
+    "exportedSymbols": {
+      "CrowdFunding": [
+        169
+      ],
+      "Funder": [
+        39
+      ]
+    },
+    "id": 170,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 34,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "36:31:1"
+      },
+      {
+        "canonicalName": "Funder",
+        "id": 39,
+        "members": [
+          {
+            "constant": false,
+            "id": 36,
+            "name": "addr",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 39,
+            "src": "257:12:1",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 35,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "257:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 38,
+            "name": "amount",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 39,
+            "src": "275:11:1",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 37,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "275:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "name": "Funder",
+        "nodeType": "StructDefinition",
+        "scope": 170,
+        "src": "237:52:1",
+        "visibility": "public"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 169,
+        "linearizedBaseContracts": [
+          169
+        ],
+        "name": "CrowdFunding",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "CrowdFunding.Campaign",
+            "id": 52,
+            "members": [
+              {
+                "constant": false,
+                "id": 41,
+                "name": "beneficiary",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 52,
+                "src": "467:27:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address_payable",
+                  "typeString": "address payable"
+                },
+                "typeName": {
+                  "id": 40,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "467:15:1",
+                  "stateMutability": "payable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 43,
+                "name": "fundingGoal",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 52,
+                "src": "504:16:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 42,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "504:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 45,
+                "name": "numFunders",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 52,
+                "src": "530:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 44,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "530:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 47,
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 52,
+                "src": "555:11:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 46,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "555:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 51,
+                "name": "funders",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 52,
+                "src": "576:32:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Funder_$39_storage_$",
+                  "typeString": "mapping(uint256 => struct Funder)"
+                },
+                "typeName": {
+                  "id": 50,
+                  "keyType": {
+                    "id": 48,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "585:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "576:24:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Funder_$39_storage_$",
+                    "typeString": "mapping(uint256 => struct Funder)"
+                  },
+                  "valueType": {
+                    "contractScope": null,
+                    "id": 49,
+                    "name": "Funder",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 39,
+                    "src": "593:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Funder_$39_storage_ptr",
+                      "typeString": "struct Funder"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Campaign",
+            "nodeType": "StructDefinition",
+            "scope": 169,
+            "src": "441:174:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 54,
+            "name": "numCampaigns",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 169,
+            "src": "621:17:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 53,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "621:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 58,
+            "name": "campaigns",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 169,
+            "src": "644:36:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Campaign_$52_storage_$",
+              "typeString": "mapping(uint256 => struct CrowdFunding.Campaign)"
+            },
+            "typeName": {
+              "id": 57,
+              "keyType": {
+                "id": 55,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "653:4:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "644:26:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Campaign_$52_storage_$",
+                "typeString": "mapping(uint256 => struct CrowdFunding.Campaign)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 56,
+                "name": "Campaign",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 52,
+                "src": "661:8:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Campaign_$52_storage_ptr",
+                  "typeString": "struct CrowdFunding.Campaign"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 90,
+              "nodeType": "Block",
+              "src": "781:368:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 70,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 67,
+                      "name": "campaignID",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 65,
+                      "src": "791:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 69,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "804:14:1",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 68,
+                        "name": "numCampaigns",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 54,
+                        "src": "804:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "791:27:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 71,
+                  "nodeType": "ExpressionStatement",
+                  "src": "791:27:1"
+                },
+                {
+                  "assignments": [
+                    73
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 73,
+                      "name": "c",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 90,
+                      "src": "1033:18:1",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Campaign_$52_storage_ptr",
+                        "typeString": "struct CrowdFunding.Campaign"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 72,
+                        "name": "Campaign",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 52,
+                        "src": "1033:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Campaign_$52_storage_ptr",
+                          "typeString": "struct CrowdFunding.Campaign"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 77,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 74,
+                      "name": "campaigns",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 58,
+                      "src": "1054:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Campaign_$52_storage_$",
+                        "typeString": "mapping(uint256 => struct CrowdFunding.Campaign storage ref)"
+                      }
+                    },
+                    "id": 76,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 75,
+                      "name": "campaignID",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 65,
+                      "src": "1064:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1054:21:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Campaign_$52_storage",
+                      "typeString": "struct CrowdFunding.Campaign storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1033:42:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 82,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 78,
+                        "name": "c",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 73,
+                        "src": "1085:1:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Campaign_$52_storage_ptr",
+                          "typeString": "struct CrowdFunding.Campaign storage pointer"
+                        }
+                      },
+                      "id": 80,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "beneficiary",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 41,
+                      "src": "1085:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 81,
+                      "name": "beneficiary",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 60,
+                      "src": "1101:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "1085:27:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "id": 83,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1085:27:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 88,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 84,
+                        "name": "c",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 73,
+                        "src": "1122:1:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Campaign_$52_storage_ptr",
+                          "typeString": "struct CrowdFunding.Campaign storage pointer"
+                        }
+                      },
+                      "id": 86,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "fundingGoal",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 43,
+                      "src": "1122:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 87,
+                      "name": "goal",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 62,
+                      "src": "1138:4:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1122:20:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 89,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1122:20:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "f7572cf3",
+            "id": 91,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "newCampaign",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 63,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60,
+                  "name": "beneficiary",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 91,
+                  "src": "708:27:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 59,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "708:15:1",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62,
+                  "name": "goal",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 91,
+                  "src": "737:9:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 61,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "737:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "707:40:1"
+            },
+            "returnParameters": {
+              "id": 66,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 65,
+                  "name": "campaignID",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 91,
+                  "src": "764:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 64,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "764:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "763:17:1"
+            },
+            "scope": 169,
+            "src": "687:462:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 124,
+              "nodeType": "Block",
+              "src": "1207:382:1",
+              "statements": [
+                {
+                  "assignments": [
+                    97
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 97,
+                      "name": "c",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 124,
+                      "src": "1217:18:1",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Campaign_$52_storage_ptr",
+                        "typeString": "struct CrowdFunding.Campaign"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 96,
+                        "name": "Campaign",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 52,
+                        "src": "1217:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Campaign_$52_storage_ptr",
+                          "typeString": "struct CrowdFunding.Campaign"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 101,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 98,
+                      "name": "campaigns",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 58,
+                      "src": "1238:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Campaign_$52_storage_$",
+                        "typeString": "mapping(uint256 => struct CrowdFunding.Campaign storage ref)"
+                      }
+                    },
+                    "id": 100,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 99,
+                      "name": "campaignID",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 93,
+                      "src": "1248:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1238:21:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Campaign_$52_storage",
+                      "typeString": "struct CrowdFunding.Campaign storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1217:42:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 115,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 102,
+                          "name": "c",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 97,
+                          "src": "1478:1:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Campaign_$52_storage_ptr",
+                            "typeString": "struct CrowdFunding.Campaign storage pointer"
+                          }
+                        },
+                        "id": 107,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "funders",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 51,
+                        "src": "1478:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Funder_$39_storage_$",
+                          "typeString": "mapping(uint256 => struct Funder storage ref)"
+                        }
+                      },
+                      "id": 108,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 106,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "++",
+                        "prefix": false,
+                        "src": "1488:14:1",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 104,
+                            "name": "c",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 97,
+                            "src": "1488:1:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Campaign_$52_storage_ptr",
+                              "typeString": "struct CrowdFunding.Campaign storage pointer"
+                            }
+                          },
+                          "id": 105,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": true,
+                          "memberName": "numFunders",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 45,
+                          "src": "1488:12:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1478:25:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Funder_$39_storage",
+                        "typeString": "struct Funder storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 110,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 184,
+                            "src": "1520:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 111,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1520:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 112,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 184,
+                            "src": "1540:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 113,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1540:9:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "id": 109,
+                        "name": "Funder",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 39,
+                        "src": "1506:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_Funder_$39_storage_ptr_$",
+                          "typeString": "type(struct Funder storage pointer)"
+                        }
+                      },
+                      "id": 114,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [
+                        "addr",
+                        "amount"
+                      ],
+                      "nodeType": "FunctionCall",
+                      "src": "1506:45:1",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Funder_$39_memory",
+                        "typeString": "struct Funder memory"
+                      }
+                    },
+                    "src": "1478:73:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Funder_$39_storage",
+                      "typeString": "struct Funder storage ref"
+                    }
+                  },
+                  "id": 116,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1478:73:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 122,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 117,
+                        "name": "c",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 97,
+                        "src": "1561:1:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Campaign_$52_storage_ptr",
+                          "typeString": "struct CrowdFunding.Campaign storage pointer"
+                        }
+                      },
+                      "id": 119,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "amount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 47,
+                      "src": "1561:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 120,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 184,
+                        "src": "1573:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 121,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "value",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1573:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1561:21:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 123,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1561:21:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "c1cbbca7",
+            "id": 125,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "contribute",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 94,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 93,
+                  "name": "campaignID",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 125,
+                  "src": "1175:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 92,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1175:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1174:17:1"
+            },
+            "returnParameters": {
+              "id": 95,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1207:0:1"
+            },
+            "scope": 169,
+            "src": "1155:434:1",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 167,
+              "nodeType": "Block",
+              "src": "1668:238:1",
+              "statements": [
+                {
+                  "assignments": [
+                    133
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 133,
+                      "name": "c",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 167,
+                      "src": "1678:18:1",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Campaign_$52_storage_ptr",
+                        "typeString": "struct CrowdFunding.Campaign"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 132,
+                        "name": "Campaign",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 52,
+                        "src": "1678:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Campaign_$52_storage_ptr",
+                          "typeString": "struct CrowdFunding.Campaign"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 137,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 134,
+                      "name": "campaigns",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 58,
+                      "src": "1699:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Campaign_$52_storage_$",
+                        "typeString": "mapping(uint256 => struct CrowdFunding.Campaign storage ref)"
+                      }
+                    },
+                    "id": 136,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 135,
+                      "name": "campaignID",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 127,
+                      "src": "1709:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1699:21:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Campaign_$52_storage",
+                      "typeString": "struct CrowdFunding.Campaign storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1678:42:1"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 142,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 138,
+                        "name": "c",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 133,
+                        "src": "1734:1:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Campaign_$52_storage_ptr",
+                          "typeString": "struct CrowdFunding.Campaign storage pointer"
+                        }
+                      },
+                      "id": 139,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "amount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 47,
+                      "src": "1734:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 140,
+                        "name": "c",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 133,
+                        "src": "1745:1:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Campaign_$52_storage_ptr",
+                          "typeString": "struct CrowdFunding.Campaign storage pointer"
+                        }
+                      },
+                      "id": 141,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "fundingGoal",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 43,
+                      "src": "1745:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1734:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 145,
+                  "nodeType": "IfStatement",
+                  "src": "1730:54:1",
+                  "trueBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 143,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1779:5:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "functionReturnParameters": 131,
+                    "id": 144,
+                    "nodeType": "Return",
+                    "src": "1772:12:1"
+                  }
+                },
+                {
+                  "assignments": [
+                    147
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 147,
+                      "name": "amount",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 167,
+                      "src": "1794:11:1",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 146,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1794:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 150,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 148,
+                      "name": "c",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 133,
+                      "src": "1808:1:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Campaign_$52_storage_ptr",
+                        "typeString": "struct CrowdFunding.Campaign storage pointer"
+                      }
+                    },
+                    "id": 149,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "amount",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 47,
+                    "src": "1808:8:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1794:22:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 155,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 151,
+                        "name": "c",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 133,
+                        "src": "1826:1:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Campaign_$52_storage_ptr",
+                          "typeString": "struct CrowdFunding.Campaign storage pointer"
+                        }
+                      },
+                      "id": 153,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "amount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 47,
+                      "src": "1826:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 154,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1837:1:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "1826:12:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 156,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1826:12:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 162,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 147,
+                        "src": "1871:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 157,
+                          "name": "c",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 133,
+                          "src": "1848:1:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Campaign_$52_storage_ptr",
+                            "typeString": "struct CrowdFunding.Campaign storage pointer"
+                          }
+                        },
+                        "id": 160,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "beneficiary",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 41,
+                        "src": "1848:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "id": 161,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1848:22:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 163,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1848:30:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 164,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1848:30:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 165,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1895:4:1",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 131,
+                  "id": 166,
+                  "nodeType": "Return",
+                  "src": "1888:11:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "5b2329d4",
+            "id": 168,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkGoalReached",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 128,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 127,
+                  "name": "campaignID",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 168,
+                  "src": "1621:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 126,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1621:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1620:17:1"
+            },
+            "returnParameters": {
+              "id": 131,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 130,
+                  "name": "reached",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 168,
+                  "src": "1654:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 129,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1654:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1653:14:1"
+            },
+            "scope": 169,
+            "src": "1595:311:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 170,
+        "src": "291:1617:1"
+      }
+    ],
+    "src": "36:1872:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/spider/Desktop/ngo_folder/contracts/ngo1.sol",
+      "exportedSymbols": {
+        "CrowdFunding": [
+          169
+        ],
+        "Funder": [
+          39
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.6",
+            ".0",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 34,
+        "name": "PragmaDirective",
+        "src": "36:31:1"
+      },
+      {
+        "attributes": {
+          "canonicalName": "Funder",
+          "name": "Funder",
+          "scope": 170,
+          "visibility": "public"
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "addr",
+              "overrides": null,
+              "scope": 39,
+              "stateVariable": false,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 35,
+                "name": "ElementaryTypeName",
+                "src": "257:7:1"
+              }
+            ],
+            "id": 36,
+            "name": "VariableDeclaration",
+            "src": "257:12:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "amount",
+              "overrides": null,
+              "scope": 39,
+              "stateVariable": false,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 37,
+                "name": "ElementaryTypeName",
+                "src": "275:4:1"
+              }
+            ],
+            "id": 38,
+            "name": "VariableDeclaration",
+            "src": "275:11:1"
+          }
+        ],
+        "id": 39,
+        "name": "StructDefinition",
+        "src": "237:52:1"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            169
+          ],
+          "name": "CrowdFunding",
+          "scope": 170
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "CrowdFunding.Campaign",
+              "name": "Campaign",
+              "scope": 169,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "beneficiary",
+                  "overrides": null,
+                  "scope": 52,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address payable",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "payable",
+                      "type": "address payable"
+                    },
+                    "id": 40,
+                    "name": "ElementaryTypeName",
+                    "src": "467:15:1"
+                  }
+                ],
+                "id": 41,
+                "name": "VariableDeclaration",
+                "src": "467:27:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "fundingGoal",
+                  "overrides": null,
+                  "scope": 52,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 42,
+                    "name": "ElementaryTypeName",
+                    "src": "504:4:1"
+                  }
+                ],
+                "id": 43,
+                "name": "VariableDeclaration",
+                "src": "504:16:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "numFunders",
+                  "overrides": null,
+                  "scope": 52,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 44,
+                    "name": "ElementaryTypeName",
+                    "src": "530:4:1"
+                  }
+                ],
+                "id": 45,
+                "name": "VariableDeclaration",
+                "src": "530:15:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "amount",
+                  "overrides": null,
+                  "scope": 52,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 46,
+                    "name": "ElementaryTypeName",
+                    "src": "555:4:1"
+                  }
+                ],
+                "id": 47,
+                "name": "VariableDeclaration",
+                "src": "555:11:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "funders",
+                  "overrides": null,
+                  "scope": 52,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "mapping(uint256 => struct Funder)",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "type": "mapping(uint256 => struct Funder)"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 48,
+                        "name": "ElementaryTypeName",
+                        "src": "585:4:1"
+                      },
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Funder",
+                          "referencedDeclaration": 39,
+                          "type": "struct Funder"
+                        },
+                        "id": 49,
+                        "name": "UserDefinedTypeName",
+                        "src": "593:6:1"
+                      }
+                    ],
+                    "id": 50,
+                    "name": "Mapping",
+                    "src": "576:24:1"
+                  }
+                ],
+                "id": 51,
+                "name": "VariableDeclaration",
+                "src": "576:32:1"
+              }
+            ],
+            "id": 52,
+            "name": "StructDefinition",
+            "src": "441:174:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "numCampaigns",
+              "overrides": null,
+              "scope": 169,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 53,
+                "name": "ElementaryTypeName",
+                "src": "621:4:1"
+              }
+            ],
+            "id": 54,
+            "name": "VariableDeclaration",
+            "src": "621:17:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "campaigns",
+              "overrides": null,
+              "scope": 169,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => struct CrowdFunding.Campaign)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => struct CrowdFunding.Campaign)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 55,
+                    "name": "ElementaryTypeName",
+                    "src": "653:4:1"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Campaign",
+                      "referencedDeclaration": 52,
+                      "type": "struct CrowdFunding.Campaign"
+                    },
+                    "id": 56,
+                    "name": "UserDefinedTypeName",
+                    "src": "661:8:1"
+                  }
+                ],
+                "id": 57,
+                "name": "Mapping",
+                "src": "644:26:1"
+              }
+            ],
+            "id": 58,
+            "name": "VariableDeclaration",
+            "src": "644:36:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "f7572cf3",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "newCampaign",
+              "overrides": null,
+              "scope": 169,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "beneficiary",
+                      "overrides": null,
+                      "scope": 91,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address payable",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "payable",
+                          "type": "address payable"
+                        },
+                        "id": 59,
+                        "name": "ElementaryTypeName",
+                        "src": "708:15:1"
+                      }
+                    ],
+                    "id": 60,
+                    "name": "VariableDeclaration",
+                    "src": "708:27:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "goal",
+                      "overrides": null,
+                      "scope": 91,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 61,
+                        "name": "ElementaryTypeName",
+                        "src": "737:4:1"
+                      }
+                    ],
+                    "id": 62,
+                    "name": "VariableDeclaration",
+                    "src": "737:9:1"
+                  }
+                ],
+                "id": 63,
+                "name": "ParameterList",
+                "src": "707:40:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "campaignID",
+                      "overrides": null,
+                      "scope": 91,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 64,
+                        "name": "ElementaryTypeName",
+                        "src": "764:4:1"
+                      }
+                    ],
+                    "id": 65,
+                    "name": "VariableDeclaration",
+                    "src": "764:15:1"
+                  }
+                ],
+                "id": 66,
+                "name": "ParameterList",
+                "src": "763:17:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 65,
+                              "type": "uint256",
+                              "value": "campaignID"
+                            },
+                            "id": 67,
+                            "name": "Identifier",
+                            "src": "791:10:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "++",
+                              "prefix": false,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 54,
+                                  "type": "uint256",
+                                  "value": "numCampaigns"
+                                },
+                                "id": 68,
+                                "name": "Identifier",
+                                "src": "804:12:1"
+                              }
+                            ],
+                            "id": 69,
+                            "name": "UnaryOperation",
+                            "src": "804:14:1"
+                          }
+                        ],
+                        "id": 70,
+                        "name": "Assignment",
+                        "src": "791:27:1"
+                      }
+                    ],
+                    "id": 71,
+                    "name": "ExpressionStatement",
+                    "src": "791:27:1"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        73
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "c",
+                          "overrides": null,
+                          "scope": 90,
+                          "stateVariable": false,
+                          "storageLocation": "storage",
+                          "type": "struct CrowdFunding.Campaign",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Campaign",
+                              "referencedDeclaration": 52,
+                              "type": "struct CrowdFunding.Campaign"
+                            },
+                            "id": 72,
+                            "name": "UserDefinedTypeName",
+                            "src": "1033:8:1"
+                          }
+                        ],
+                        "id": 73,
+                        "name": "VariableDeclaration",
+                        "src": "1033:18:1"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct CrowdFunding.Campaign storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 58,
+                              "type": "mapping(uint256 => struct CrowdFunding.Campaign storage ref)",
+                              "value": "campaigns"
+                            },
+                            "id": 74,
+                            "name": "Identifier",
+                            "src": "1054:9:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 65,
+                              "type": "uint256",
+                              "value": "campaignID"
+                            },
+                            "id": 75,
+                            "name": "Identifier",
+                            "src": "1064:10:1"
+                          }
+                        ],
+                        "id": 76,
+                        "name": "IndexAccess",
+                        "src": "1054:21:1"
+                      }
+                    ],
+                    "id": 77,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1033:42:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address payable"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "beneficiary",
+                              "referencedDeclaration": 41,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 73,
+                                  "type": "struct CrowdFunding.Campaign storage pointer",
+                                  "value": "c"
+                                },
+                                "id": 78,
+                                "name": "Identifier",
+                                "src": "1085:1:1"
+                              }
+                            ],
+                            "id": 80,
+                            "name": "MemberAccess",
+                            "src": "1085:13:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 60,
+                              "type": "address payable",
+                              "value": "beneficiary"
+                            },
+                            "id": 81,
+                            "name": "Identifier",
+                            "src": "1101:11:1"
+                          }
+                        ],
+                        "id": 82,
+                        "name": "Assignment",
+                        "src": "1085:27:1"
+                      }
+                    ],
+                    "id": 83,
+                    "name": "ExpressionStatement",
+                    "src": "1085:27:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "fundingGoal",
+                              "referencedDeclaration": 43,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 73,
+                                  "type": "struct CrowdFunding.Campaign storage pointer",
+                                  "value": "c"
+                                },
+                                "id": 84,
+                                "name": "Identifier",
+                                "src": "1122:1:1"
+                              }
+                            ],
+                            "id": 86,
+                            "name": "MemberAccess",
+                            "src": "1122:13:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 62,
+                              "type": "uint256",
+                              "value": "goal"
+                            },
+                            "id": 87,
+                            "name": "Identifier",
+                            "src": "1138:4:1"
+                          }
+                        ],
+                        "id": 88,
+                        "name": "Assignment",
+                        "src": "1122:20:1"
+                      }
+                    ],
+                    "id": 89,
+                    "name": "ExpressionStatement",
+                    "src": "1122:20:1"
+                  }
+                ],
+                "id": 90,
+                "name": "Block",
+                "src": "781:368:1"
+              }
+            ],
+            "id": 91,
+            "name": "FunctionDefinition",
+            "src": "687:462:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "c1cbbca7",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "contribute",
+              "overrides": null,
+              "scope": 169,
+              "stateMutability": "payable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "campaignID",
+                      "overrides": null,
+                      "scope": 125,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 92,
+                        "name": "ElementaryTypeName",
+                        "src": "1175:4:1"
+                      }
+                    ],
+                    "id": 93,
+                    "name": "VariableDeclaration",
+                    "src": "1175:15:1"
+                  }
+                ],
+                "id": 94,
+                "name": "ParameterList",
+                "src": "1174:17:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 95,
+                "name": "ParameterList",
+                "src": "1207:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        97
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "c",
+                          "overrides": null,
+                          "scope": 124,
+                          "stateVariable": false,
+                          "storageLocation": "storage",
+                          "type": "struct CrowdFunding.Campaign",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Campaign",
+                              "referencedDeclaration": 52,
+                              "type": "struct CrowdFunding.Campaign"
+                            },
+                            "id": 96,
+                            "name": "UserDefinedTypeName",
+                            "src": "1217:8:1"
+                          }
+                        ],
+                        "id": 97,
+                        "name": "VariableDeclaration",
+                        "src": "1217:18:1"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct CrowdFunding.Campaign storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 58,
+                              "type": "mapping(uint256 => struct CrowdFunding.Campaign storage ref)",
+                              "value": "campaigns"
+                            },
+                            "id": 98,
+                            "name": "Identifier",
+                            "src": "1238:9:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 93,
+                              "type": "uint256",
+                              "value": "campaignID"
+                            },
+                            "id": 99,
+                            "name": "Identifier",
+                            "src": "1248:10:1"
+                          }
+                        ],
+                        "id": 100,
+                        "name": "IndexAccess",
+                        "src": "1238:21:1"
+                      }
+                    ],
+                    "id": 101,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1217:42:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct Funder storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct Funder storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "funders",
+                                  "referencedDeclaration": 51,
+                                  "type": "mapping(uint256 => struct Funder storage ref)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 97,
+                                      "type": "struct CrowdFunding.Campaign storage pointer",
+                                      "value": "c"
+                                    },
+                                    "id": 102,
+                                    "name": "Identifier",
+                                    "src": "1478:1:1"
+                                  }
+                                ],
+                                "id": 107,
+                                "name": "MemberAccess",
+                                "src": "1478:9:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "++",
+                                  "prefix": false,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "member_name": "numFunders",
+                                      "referencedDeclaration": 45,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 97,
+                                          "type": "struct CrowdFunding.Campaign storage pointer",
+                                          "value": "c"
+                                        },
+                                        "id": 104,
+                                        "name": "Identifier",
+                                        "src": "1488:1:1"
+                                      }
+                                    ],
+                                    "id": 105,
+                                    "name": "MemberAccess",
+                                    "src": "1488:12:1"
+                                  }
+                                ],
+                                "id": 106,
+                                "name": "UnaryOperation",
+                                "src": "1488:14:1"
+                              }
+                            ],
+                            "id": 108,
+                            "name": "IndexAccess",
+                            "src": "1478:25:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": true,
+                              "lValueRequested": false,
+                              "names": [
+                                "addr",
+                                "amount"
+                              ],
+                              "tryCall": false,
+                              "type": "struct Funder memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_address_payable",
+                                      "typeString": "address payable"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 39,
+                                  "type": "type(struct Funder storage pointer)",
+                                  "value": "Funder"
+                                },
+                                "id": 109,
+                                "name": "Identifier",
+                                "src": "1506:6:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "referencedDeclaration": null,
+                                  "type": "address payable"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 184,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 110,
+                                    "name": "Identifier",
+                                    "src": "1520:3:1"
+                                  }
+                                ],
+                                "id": 111,
+                                "name": "MemberAccess",
+                                "src": "1520:10:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "value",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 184,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 112,
+                                    "name": "Identifier",
+                                    "src": "1540:3:1"
+                                  }
+                                ],
+                                "id": 113,
+                                "name": "MemberAccess",
+                                "src": "1540:9:1"
+                              }
+                            ],
+                            "id": 114,
+                            "name": "FunctionCall",
+                            "src": "1506:45:1"
+                          }
+                        ],
+                        "id": 115,
+                        "name": "Assignment",
+                        "src": "1478:73:1"
+                      }
+                    ],
+                    "id": 116,
+                    "name": "ExpressionStatement",
+                    "src": "1478:73:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "+=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "amount",
+                              "referencedDeclaration": 47,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 97,
+                                  "type": "struct CrowdFunding.Campaign storage pointer",
+                                  "value": "c"
+                                },
+                                "id": 117,
+                                "name": "Identifier",
+                                "src": "1561:1:1"
+                              }
+                            ],
+                            "id": 119,
+                            "name": "MemberAccess",
+                            "src": "1561:8:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "value",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 184,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 120,
+                                "name": "Identifier",
+                                "src": "1573:3:1"
+                              }
+                            ],
+                            "id": 121,
+                            "name": "MemberAccess",
+                            "src": "1573:9:1"
+                          }
+                        ],
+                        "id": 122,
+                        "name": "Assignment",
+                        "src": "1561:21:1"
+                      }
+                    ],
+                    "id": 123,
+                    "name": "ExpressionStatement",
+                    "src": "1561:21:1"
+                  }
+                ],
+                "id": 124,
+                "name": "Block",
+                "src": "1207:382:1"
+              }
+            ],
+            "id": 125,
+            "name": "FunctionDefinition",
+            "src": "1155:434:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "5b2329d4",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "checkGoalReached",
+              "overrides": null,
+              "scope": 169,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "campaignID",
+                      "overrides": null,
+                      "scope": 168,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 126,
+                        "name": "ElementaryTypeName",
+                        "src": "1621:4:1"
+                      }
+                    ],
+                    "id": 127,
+                    "name": "VariableDeclaration",
+                    "src": "1621:15:1"
+                  }
+                ],
+                "id": 128,
+                "name": "ParameterList",
+                "src": "1620:17:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "reached",
+                      "overrides": null,
+                      "scope": 168,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 129,
+                        "name": "ElementaryTypeName",
+                        "src": "1654:4:1"
+                      }
+                    ],
+                    "id": 130,
+                    "name": "VariableDeclaration",
+                    "src": "1654:12:1"
+                  }
+                ],
+                "id": 131,
+                "name": "ParameterList",
+                "src": "1653:14:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        133
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "c",
+                          "overrides": null,
+                          "scope": 167,
+                          "stateVariable": false,
+                          "storageLocation": "storage",
+                          "type": "struct CrowdFunding.Campaign",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Campaign",
+                              "referencedDeclaration": 52,
+                              "type": "struct CrowdFunding.Campaign"
+                            },
+                            "id": 132,
+                            "name": "UserDefinedTypeName",
+                            "src": "1678:8:1"
+                          }
+                        ],
+                        "id": 133,
+                        "name": "VariableDeclaration",
+                        "src": "1678:18:1"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct CrowdFunding.Campaign storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 58,
+                              "type": "mapping(uint256 => struct CrowdFunding.Campaign storage ref)",
+                              "value": "campaigns"
+                            },
+                            "id": 134,
+                            "name": "Identifier",
+                            "src": "1699:9:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 127,
+                              "type": "uint256",
+                              "value": "campaignID"
+                            },
+                            "id": 135,
+                            "name": "Identifier",
+                            "src": "1709:10:1"
+                          }
+                        ],
+                        "id": 136,
+                        "name": "IndexAccess",
+                        "src": "1699:21:1"
+                      }
+                    ],
+                    "id": 137,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1678:42:1"
+                  },
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "<",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "amount",
+                              "referencedDeclaration": 47,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 133,
+                                  "type": "struct CrowdFunding.Campaign storage pointer",
+                                  "value": "c"
+                                },
+                                "id": 138,
+                                "name": "Identifier",
+                                "src": "1734:1:1"
+                              }
+                            ],
+                            "id": 139,
+                            "name": "MemberAccess",
+                            "src": "1734:8:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "fundingGoal",
+                              "referencedDeclaration": 43,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 133,
+                                  "type": "struct CrowdFunding.Campaign storage pointer",
+                                  "value": "c"
+                                },
+                                "id": 140,
+                                "name": "Identifier",
+                                "src": "1745:1:1"
+                              }
+                            ],
+                            "id": 141,
+                            "name": "MemberAccess",
+                            "src": "1745:13:1"
+                          }
+                        ],
+                        "id": 142,
+                        "name": "BinaryOperation",
+                        "src": "1734:24:1"
+                      },
+                      {
+                        "attributes": {
+                          "functionReturnParameters": 131
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "66616c7365",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "false"
+                            },
+                            "id": 143,
+                            "name": "Literal",
+                            "src": "1779:5:1"
+                          }
+                        ],
+                        "id": 144,
+                        "name": "Return",
+                        "src": "1772:12:1"
+                      }
+                    ],
+                    "id": 145,
+                    "name": "IfStatement",
+                    "src": "1730:54:1"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        147
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "amount",
+                          "overrides": null,
+                          "scope": 167,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "uint256",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint",
+                              "type": "uint256"
+                            },
+                            "id": 146,
+                            "name": "ElementaryTypeName",
+                            "src": "1794:4:1"
+                          }
+                        ],
+                        "id": 147,
+                        "name": "VariableDeclaration",
+                        "src": "1794:11:1"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "amount",
+                          "referencedDeclaration": 47,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 133,
+                              "type": "struct CrowdFunding.Campaign storage pointer",
+                              "value": "c"
+                            },
+                            "id": 148,
+                            "name": "Identifier",
+                            "src": "1808:1:1"
+                          }
+                        ],
+                        "id": 149,
+                        "name": "MemberAccess",
+                        "src": "1808:8:1"
+                      }
+                    ],
+                    "id": 150,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1794:22:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "amount",
+                              "referencedDeclaration": 47,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 133,
+                                  "type": "struct CrowdFunding.Campaign storage pointer",
+                                  "value": "c"
+                                },
+                                "id": 151,
+                                "name": "Identifier",
+                                "src": "1826:1:1"
+                              }
+                            ],
+                            "id": 153,
+                            "name": "MemberAccess",
+                            "src": "1826:8:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "30",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 0",
+                              "value": "0"
+                            },
+                            "id": 154,
+                            "name": "Literal",
+                            "src": "1837:1:1"
+                          }
+                        ],
+                        "id": 155,
+                        "name": "Assignment",
+                        "src": "1826:12:1"
+                      }
+                    ],
+                    "id": 156,
+                    "name": "ExpressionStatement",
+                    "src": "1826:12:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "transfer",
+                              "referencedDeclaration": null,
+                              "type": "function (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "beneficiary",
+                                  "referencedDeclaration": 41,
+                                  "type": "address payable"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 133,
+                                      "type": "struct CrowdFunding.Campaign storage pointer",
+                                      "value": "c"
+                                    },
+                                    "id": 157,
+                                    "name": "Identifier",
+                                    "src": "1848:1:1"
+                                  }
+                                ],
+                                "id": 160,
+                                "name": "MemberAccess",
+                                "src": "1848:13:1"
+                              }
+                            ],
+                            "id": 161,
+                            "name": "MemberAccess",
+                            "src": "1848:22:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 147,
+                              "type": "uint256",
+                              "value": "amount"
+                            },
+                            "id": 162,
+                            "name": "Identifier",
+                            "src": "1871:6:1"
+                          }
+                        ],
+                        "id": 163,
+                        "name": "FunctionCall",
+                        "src": "1848:30:1"
+                      }
+                    ],
+                    "id": 164,
+                    "name": "ExpressionStatement",
+                    "src": "1848:30:1"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 131
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "hexvalue": "74727565",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "subdenomination": null,
+                          "token": "bool",
+                          "type": "bool",
+                          "value": "true"
+                        },
+                        "id": 165,
+                        "name": "Literal",
+                        "src": "1895:4:1"
+                      }
+                    ],
+                    "id": 166,
+                    "name": "Return",
+                    "src": "1888:11:1"
+                  }
+                ],
+                "id": 167,
+                "name": "Block",
+                "src": "1668:238:1"
+              }
+            ],
+            "id": 168,
+            "name": "FunctionDefinition",
+            "src": "1595:311:1"
+          }
+        ],
+        "id": 169,
+        "name": "ContractDefinition",
+        "src": "291:1617:1"
+      }
+    ],
+    "id": 170,
+    "name": "SourceUnit",
+    "src": "36:1872:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.1+commit.e6f7d5a4.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-04-23T14:56:08.379Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
